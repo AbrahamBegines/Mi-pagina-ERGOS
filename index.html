@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .header, .footer {
+            text-align: center;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 0;
+        }
+        .main {
+            margin: 20px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .vibrating {
+            animation: vibrate 0.3s infinite; /* Efecto de vibración solo para el gif */
+        }
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 0); }
+            40% { transform: translate(2px, 0); }
+            60% { transform: translate(-2px, 0); }
+            80% { transform: translate(2px, 0); }
+            100% { transform: translate(0); }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 5px solid black;
+            background-color: bisque;
+        }
+        tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+        tr:hover {
+            background-color: #b2dfdb;
+        }
+        .toggle-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        let audio;
+
+        function toggleImage() {
+            const img = document.getElementById('warningImage');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                audio.play(); // Reproduce el audio
+            } else {
+                img.style.display = 'none';
+            }
+        }
+
+        function initAudio() {
+            audio = new Audio('https://www.example.com/tu-audio.mp3'); // Cambia esta ruta por la de tu audio
+            audio.loop = true; // Hacer que el audio se repita
+        }
+
+        window.onload = initAudio; // Inicializa el audio al cargar la página
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>¡Soy Wolfangkillers!</h1>
+    </div>
+
+    <div class="main">
+        <img src="https://i.ytimg.com/vi/Y3n0E-mFUXI/sddefault.jpg" alt="Comiendo una sandia el tio">
+        <h2 style="color: red;" title="El bolsillo" id="Bolsillo">Y aquí está mi bolsillo mágico</h2>
+
+        <a href="https://www.youtube.com/watch?v=xIGK3vWaR0M&pp=ygUNZXN0b3kgZG9yYW1pbw%3D%3D">Doraemon real 100% no fake</a>
+        <br>
+        <a href="https://www.youtube.com/watch?v=6qIkFU9-Q_0&pp=ygUZbm8gcHVlZGVzIGNvbm1pZ28gZG9taW5nbw%3D%3D">No puedes conmigo Domingo</a>
+        <br>
+
+        <h3 style="color: red;">El chupo domingo el chupo...</h3>
+        <img class="vibrating" src="https://media.tenor.com/zI3j1z0c6kAAAAAM/wolfangkillers-explicao.gif" alt="Explicao" width="500" height="200">
+        <h4>Domingo, un warning</h4>
+        <h2 style="color: red;">Warnings de domingo</h2>
+
+        <table>
+            <tr>
+                <th>Warnings</th>
+                <th>Fecha</th>
+            </tr>
+            <tr>
+                <td>Insulto de gratis, muy subido el ego</td>
+                <td>22/10/2020</td>
+            </tr>
+            <tr>
+                <td>Flashea a su equipo en vez del rival</td>
+                <td>12/09/2020</td>
+            </tr>
+            <tr>
+                <td>Abandono de partida</td>
+                <td>10/04/2019</td>
+            </tr>
+        </table>
+
+        <button class="toggle-button" onclick="toggleImage()">Mostrar/Ocultar El Warning</button>
+        <img id="warningImage" src="./Warning.jpg" alt="El Warning" height="300" width="1400" style="display: none;">
+
+        <p style="color: green;">Team TGD</p>
+    </div>
+
+    <div class="footer">
+        <p>Abraham Begines Ruiz</p>
+    </div>
+</body>
+
+</html>
+
+
+

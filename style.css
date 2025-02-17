@@ -1,0 +1,50 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(226, 114, 128);
+}
+
+a {
+    color: blue;
+    font-size: 20px;
+    text-decoration: none; /* Cambié "solid" a "none" para que no haya subrayado */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Asegura que la tabla use todo el ancho disponible */
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 5px solid black;
+    padding: 20px; /* Corregido el espacio a 20px sin el espacio adicional */
+    text-align: center;
+    background-color: bisque;
+    background-image: url(https://wallpapers.com/images/hd/cs-go-orange-and-blue-background-zpwt7ucuskweg9d3.jpg);
+    background-size: cover; /* Asegura que la imagen de fondo cubra el área */
+}
+
+tr:nth-child(even) {
+    background-color: aquamarine; /* Cambié el selector para filas pares */
+}
+
+.header,
+.footer {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    background-image: url("https://gepig.com/game_cover_bg_1190w/1488.jpg");
+    background-size: cover; /* Asegura que la imagen de fondo cubra el área */
+}
+
+.main {
+    padding: 20px;
+    background-color: orangered;
+}
